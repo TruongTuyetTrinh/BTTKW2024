@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        .gridcontainer {
+            display: grid;
+            gap: 30px;
+        }
+
+        .box {
+            background-color: #e0e5ec;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            padding-bottom: 30px;
+
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .wc button {
+            display: flex;
+            background-color: #0061f2;
+            border: none;
+            cursor: pointer;
+            /*con trỏ thành nút bấm*/
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            margin: auto
+        }
+
+        .fa-solid {
+            color: white;
+            background-color: #0061f2;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            margin-top: -25px;
+        }
+
+        .wc {
+            grid-area: wc;
+        }
+
+        .fnl {
+            grid-area: fnl;
+        }
+
+        .ftd {
+            grid-area: ftd;
+        }
+
+        .jhh {
+            grid-area: jhh;
+        }
+
+        .fb {
+            grid-area: fb;
+        }
+
+        .scc {
+            grid-area: scc;
+        }
+
+        .anyt {
+            grid-area: anyt;
+        }
+
+
+
+        @media (max-width:640px) {
+            .gridcontainer {
+                grid-template-areas:
+                    'wc'
+                    'fnl'
+                    'ftd'
+                    'jhh'
+                    'fb'
+                    'scc'
+                    'anyt';
+            }
+        }
+
+        @media (min-width:641px) {
+            .gridcontainer {
+                grid-template-areas:
+                    'wc'
+                    'fnl'
+                    'ftd'
+                    'jhh'
+                    'fb'
+                    'scc'
+                    'anyt';
+            }
+        }
+
+        @media (min-width:1024px) {
+            .gridcontainer {
+                grid-template-areas: 'wc wc wc'
+                    'fnl ftd jhh'
+                    'fb scc anyt';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcontainer">
+        <div class="box wc">
+            <h1>A warm welcome!</h1>
+            <span>Bootstrap utility classes are used to create this jumbotron since the old component has been removed
+                from the framework. Why create custom CSS when you can use utilities?</span><br><br>
+            <button>Call to action</button>
+
+        </div>
+
+        <div class="box fnl">
+            <div class="icon"><i class="fa-solid fa-folder"></i></div>
+            <h2>Fresh new layout</h2>
+            <span>With Bootstrap 5, we've created a fresh new layout for this template!</span>
+        </div>
+
+        <div class="box ftd">
+            <div class="icon"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+            <h2>Free to download</h2>
+            <span>As always, Start Bootstrap has a powerful collectin of free templates</span>
+        </div>
+
+        <div class="box jhh">
+            <div class="icon"><i class="fa-solid fa-file-invoice"></i></div>
+            <h2>Jumbotron hero header</h2>
+            <span>The heroic part of this template is the jumbotron hero header!</span>
+        </div>
+
+        <div class="box fb">
+            <div class="icon"><i class="fa-solid fa-table-cells-large"></i></div>
+            <h2>Feature boxes</h2>
+            <span>We've created some custom feature boxes using Bootstrap icons!</span>
+        </div>
+
+        <div class="box scc">
+            <div class="icon"><i class="fa-solid fa-code"></i></div>
+            <h2>Simple clean code</h2>
+            <span>We keep our dependencies up to date and squash bugs as they come!</span>
+        </div>
+
+        <div class="box anyt">
+            <div class="icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h2>A name you trust</h2>
+            <span>Start Bootstrap has been the leader in free Bootstrap templates since 2013</span>
+        </div>
+
+</body>
+
+</html>

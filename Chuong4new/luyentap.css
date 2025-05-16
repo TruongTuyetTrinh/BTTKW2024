@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: arial,Helvetica,sans-serif;
+    
+   
+    
+       
+}
+li{
+    list-style:none; 
+}
+a{
+    text-decoration: none
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding:12px 50px;
+    height:70px;
+    align-items: center;
+    
+}
+.logo{
+    flex: 0 1 auto;
+    margin-right: 40px;
+    
+}
+.menu{
+    flex:2;
+    display: flex;
+     
+    
+}
+.menu >li{
+    padding :0px 12px;
+    position: relative;
+}
+.menu>li a {
+    font-size: 16px;
+    font-weight: bold;
+    color:#000;
+    line-height: 20px;
+    display: block;
+    
+}
+.sub-menu{
+    position: absolute;
+    width: 120px;
+    border: 1px solid #ccc;
+    padding:10px 0px 10px 20px;
+    visibility: hidden;
+    top:50px;
+    transition: 0.3s;
+    
+}
+.menu>li:hover .sub-menu
+{
+    visibility: visible;
+    top:30px;
+}
+.sub-menu>li a{
+    font-weight: bold;
+    font-size: 14px;
+}
+.sub-menu>li ul{
+    font-size: 10px;
+    padding-left: 10px;
+}
+
+.other{
+    flex:1;
+    display: flex;
+}
+.other >li{
+    padding :0 12px;
+   /* position: relative;*/
+    
+}
+/*.other> li::after{ thêm dấu gạch chỗ icon
+    content: "";
+    display: block;
+    width: 1px;
+    height:80%;
+    position: absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    
+    
+    
+}
+.other> li:last-child::after{
+    display: none;
+}*/
+.other > li:first-child {
+    position: relative;
+    
+}
+.other > li:first-child input{
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #333;
+    padding-right:10px;
+
+    
+    
+    
+}
+
+.other > li:first-child i{
+    position: absolute;
+    right:10px;
+    
+    
+    
+}
+.anh{
+    position: relative;
+    
+    overflow: hidden; /* Đảm bảo chỉ hiển thị 1 ảnh tại một thời điểm */
+    
+}
+.carousel-inner{
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+.carousel-inner>img{
+    padding: 20px 20px 10px 20px;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+    
+}
+.anh .prev-btn,
+.anh .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.anh .prev-btn {
+    left: 10px;
+}
+
+.anh .next-btn {
+    right: 10px;
+}
+
+.anh .prev-btn:hover,
+.anh .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+.content{
+    display: flex;
+    align-items: stretch;  
+    justify-content: flex-start;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height:60px;
+    
+}
+.sale {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.sale.a {
+     background-color: #e74c3c;
+    flex-basis: 35%;
+}
+
+.sale.b {
+    background-color: #e67e22;
+    flex-basis: 35%;
+
+}
+
+.sale.c {
+    background-color: #c0392b; /* Màu đỏ đậm */
+    flex-basis: 35%;
+}
+
+----------------------------
+
+footer {
+            background-color: #f8f8f8;
+            padding: 40px 20px;
+            border-top: 1px solid #ddd;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            margin: 0 auto;
+        }
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+.footer-logo{
+    
+    padding: 10px 10px; /* Khoảng cách nội dung trong container */
+    
+}
+        .footer-logo img {
+            height: 50px;
+            
+        }
+        .footer-social i {
+    
+            font-size: 20px;
+            margin:7px;
+            color: #333;
+            cursor: pointer;
+            
+        }
+        .footer-social i:hover {
+            color: #007bff;
+        }
+        .hotline{
+            font-size: 16px;
+            font-weight: bold;
+            border:1px solid black;
+            background-color: black;
+            color:white;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding:10px 20px ;
+            display: inline-block;
+            white-space: nowrap;
+
+}
+        .footer-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-list li {
+            margin: 6px;
+        }
+        .footer-list a {
+            text-decoration: none;
+            color: #333;
+        }
+        .footer-list a:hover {
+            color: #007bff;
+        }
+        .footer-newsletter input[type="email"] {
+            width: calc(100% - 60px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+        .footer-newsletter button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #333;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .footer-newsletter button:hover {
+            background-color: #007bff;
+        }
+        .footer-app img {
+            max-width: 140px;
+            margin: 10px 0;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }

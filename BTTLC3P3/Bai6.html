@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grid-container{
+            display: grid;
+            padding:10px;
+            grid-auto-rows: 200px;
+            grid-template-columns: auto auto ;
+            gap:10px;
+            
+        }
+        .grid-item{
+            background-color: rgb(25, 185, 153);
+            display: flex;
+            font-size: 4vw;
+            padding:10px;
+            
+            justify-content: center;
+        
+        }
+        @media (max-width: 640px) {
+            .grid_container {
+              grid-template-columns: auto;
+            }
+          }
+          @media (min-width: 768px) {
+            .grid_container {
+              grid-template-columns: auto auto;
+            }
+            .item1{
+            grid-column: 1/2;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">Mục 1</div>
+        <div class="grid-item item2">Mục 2</div>
+        <div class="grid-item item3">Mục 3</div>
+        <div class="grid-item item4">Mục 4</div>
+        
+        
+        
+    </div>
+</body>
+</html>

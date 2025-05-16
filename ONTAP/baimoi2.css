@@ -1,0 +1,87 @@
+* Đặt nền cho toàn bộ form */
+body {
+    background-color: #ffffe3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+i{
+    color: #05c5ff;
+}
+/* Định dạng cho form liên hệ */
+.contact-form {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Định dạng cho phần thông tin liên hệ */
+.contact-info {
+    color: rgb(2, 2, 2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.info-item {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+/* Định dạng cho phần form điền thông tin */
+.contact-form-box {
+    padding: 30px;
+    width: 65%;
+}
+
+.contact-form-box h2 {
+    color: #538fff;
+    margin: 0 0 10px;
+}
+
+.contact-form-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #d8d8d8;
+}
+
+.contact-form-box button {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: #538fff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}

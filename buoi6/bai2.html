@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between; /* Căn đều khoảng cách giữa các hộp */
+        }
+
+        .box {
+            flex: 1; /* Đảm bảo mỗi hộp chiếm một không gian bằng nhau */
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .box1 {
+            background-color: red;
+        }
+
+        .box2 {
+            background-color: blue;
+        }
+
+        .box3 {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Hộp 1</div>
+        <div class="box box2">Hộp 2</div>
+        <div class="box box3">Hộp 3</div>
+    </div>
+</body>
+</html>
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+         body {
+             height: 100vh; /* Đảm bảo container chiếm toàn bộ chiều cao màn hình */
+             display: flex;
+             justify-content: center; /* Căn giữa theo chiều ngang */
+             align-items: center; /* Căn giữa theo chiều dọc */
+             background-color: rgb(240, 240, 240);
+         }
+ 
+         .container {
+             display: flex;
+             justify-content: space-between;
+             width: 300px; /* Đặt chiều rộng cho container để các hộp không chiếm toàn bộ màn hình */
+         }
+ 
+         .box {
+             width: 100px;
+             height: 100px;
+             background-color: orange;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             color: white;
+             font-weight: bold;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <div class="box">Hộp 1</div>
+         <div class="box">Hộp 2</div>
+     </div>
+ </body>
+ </html>

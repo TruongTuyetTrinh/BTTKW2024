@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            background-color: black;
+            color: rgb(233, 228, 228);
+        }
+
+        .body {
+            display: flex;
+            justify-content: space-between;
+            padding: 60px;
+            background-color: black;
+            color: rgb(233, 228, 228);
+            gap: 80px;
+            font-size: 30px;
+            
+        }
+
+        .body_text {
+            color: rgb(173, 171, 171);
+        }
+
+        a {
+            color: rgb(173, 171, 171);
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .bt1 {
+            color: whitesmoke;
+            background-color: rgb(29, 78, 213);
+            padding: 8px;
+            border-radius: 5px;
+            border-color: rgb(36, 36, 222);
+            width: 100px;
+
+        }
+
+        .bt2 {
+            color: whitesmoke;
+            background-color: black;
+            padding: 8px;
+            border-radius: 5px;
+            border-color: whitesmoke;
+            width: 100px;
+            margin-left: 15px;
+
+        }
+
+        .body2 {
+            background-color: rgb(56, 55, 55);
+            color: rgb(173, 167, 167);
+            font-size: 50pt;
+            padding: 40px;
+            width: 700px;
+           height: 300px;
+            text-align: center;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            padding: 60px;
+            gap:15px;
+        }
+        .item1{
+            grid-row:1/3 ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="start"> Start Bootstrap</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Pricing</a>
+            <a href="#">FAQ</a>
+            <a href="#">Blog</a>
+            <a href="#">Portfolio</a>
+        </div>
+
+    </div>
+    <div class="body">
+        <div class="body1">
+            <h2>A Boostrap 5 template for modern businesses</h2>
+            <p class="body_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, ratione.</p>
+            <button class="bt1">Get Started</button>
+            <button class="bt2">Learn more</button>
+        </div>
+        <div class="body2">
+            <p>600 x 400</p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="item1">
+            <h4>A better way to start building</h4>
+        </div>
+        <div class="item2">
+            <h5>Featured title</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim.</p>
+        
+        </div>
+        <div class="item3">
+            <h5>Featured title</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim.</p>
+        
+        </div>
+        <div class="item4">
+            <h5>Featured title</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim.</p>
+        
+        </div>
+        <div class="item5">
+            <h5>Featured title</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim.</p>
+        
+        </div>
+    </div>
+</body>
+
+</html>

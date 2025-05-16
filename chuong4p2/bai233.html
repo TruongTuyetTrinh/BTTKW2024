@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 10px;
+            margin-left: 5px;
+            background-color: red;
+            color: yellow;
+            font-weight: bold;
+            border: none;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        <img id="anhHaNoi" src="hn.png" width="300px" height="300px" style="  display:none; border: 2px solid crimson">
+        <img id="anhhue" src="hue.png" width="300px" height="300px" style="display:none; border: 2px solid crimson">
+        <img id="anhDN" src="dn.png" width="300px" height="300px"  style="display:none; border: 2px solid crimson">
+
+
+    </div>
+    <button onclick="showcity(1)">Hà Nội</button>
+    <button onclick="showcity(2)">Huế</button>
+    <button onclick="showcity(3)">Đà Nẵng</button>
+
+    <script>
+        function showcity(city){
+            document.getElementById('anhHaNoi').style.display = 'none';
+            document.getElementById('anhhue').style.display = 'none';
+            document.getElementById('anhDN').style.display = 'none';
+            if (city===1)
+            {
+                document.getElementById('anhHaNoi').style.display='block';
+            }
+            else if (city === 2) {
+                document.getElementById('anhhue').style.display = 'block';
+            } else if (city === 3) {
+                document.getElementById('anhDN').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

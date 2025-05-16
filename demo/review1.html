@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review #GH0001</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F8FAFC;
+            font-family: 'Inter', sans-serif;
+        }
+        .container {
+            width: 375px;
+            height: 812px;
+            margin: 0 auto;
+            background-color: #F8FAFC;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+        }
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #0F172A;
+            text-align: center;
+            flex: 1;
+        }
+        .back-icon, .menu-icon {
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: #0F172A;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: 106px;
+            left: 50%;
+            transform: translateX(-50%);
+            object-fit: cover;
+        }
+        .rating-section {
+            position: absolute;
+            top: 213px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .rating-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #0F172A;
+            margin-bottom: 16px;
+        }
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .star {
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: #D1D5DB;
+            cursor: pointer;
+        }
+        .star.filled {
+            color: #FFD700;
+        }
+        .upload-section {
+            position: absolute;
+            top: 292px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .upload-text {
+            font-size: 12px;
+            font-style: italic;
+            color: #0F172A;
+            margin-bottom: 16px;
+        }
+        .upload-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        .upload-box {
+            width: 121px;
+            height: 69px;
+            border: 1px dashed #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            color: #000;
+            gap: 8px;
+            position: relative;
+        }
+        .upload-box i {
+            font-size: 24px;
+            color: #0F172A;
+        }
+        .upload-box input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .review-section {
+            position: absolute;
+            top: 450px;
+            left: 7px;
+            right: 7px;
+        }
+        .review-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #0F172A;
+            margin-bottom: 8px;
+        }
+        .review-input {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #0F172A;
+            box-sizing: border-box;
+        }
+        .submit-section {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 16px;
+            background: #fff;
+            box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        .submit-button {
+            width: 361px;
+            padding: 10px;
+            background: #422006;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+        }
+        .bottom-bar {
+            width: 134px;
+            height: 5px;
+            background: #475569;
+            border-radius: 100px;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <i class="fas fa-arrow-left back-icon" onclick="window.location.href='reviews.html'"></i>
+            <div class="header-title">Review #GH0001</div>
+            <i class="fas fa-bars menu-icon"></i>
+        </div>
+
+        <!-- Profile Picture -->
+        <img class="profile-pic" src="https://picsum.photos/100/100?random=1" alt="Profile Picture">
+
+        <!-- Rating Section -->
+        <div class="rating-section">
+            <div class="rating-title">Đánh giá đơn hàng</div>
+            <div class="stars" id="rating-stars">
+                <i class="fas fa-star star" data-value="1"></i>
+                <i class="fas fa-star star" data-value="2"></i>
+                <i class="fas fa-star star" data-value="3"></i>
+                <i class="fas fa-star star" data-value="4"></i>
+                <i class="fas fa-star star" data-value="5"></i>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <div class="upload-text">Thêm hình ảnh/ video về sản phẩm</div>
+            <div class="upload-boxes">
+                <div class="upload-box">
+                    <i class="fas fa-camera"></i>
+                    <div>Hình ảnh</div>
+                    <input type="file" id="image-upload" accept="image/*" multiple>
+                </div>
+                <div class="upload-box">
+                    <i class="fas fa-video"></i>
+                    <div>Video</div>
+                    <input type="file" id="video-upload" accept="video/*">
+                </div>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <div class="review-title">Viết đánh giá</div>
+            <textarea class="review-input" id="review-text" rows="3">Đồ ăn ngon, giao hàng nhanh, tôi sẽ đặt nhiều lần nữa.</textarea>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="submit-section">
+            <button class="submit-button" onclick="submitReview()">Submit</button>
+            <div class="bottom-bar"></div>
+        </div>
+    </div>
+
+    <script>
+        // Handle star rating
+        const stars = document.querySelectorAll('#rating-stars .star');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.getAttribute('data-value'));
+                stars.forEach(s => {
+                    if (parseInt(s.getAttribute('data-value')) <= selectedRating) {
+                        s.classList.add('filled');
+                    } else {
+                        s.classList.remove('filled');
+                    }
+                });
+            });
+        });
+
+        // Handle review submission
+        function submitReview() {
+            try {
+                const reviewText = document.getElementById('review-text').value;
+                const imageFiles = document.getElementById('image-upload').files;
+                const videoFile = document.getElementById('video-upload').files[0];
+
+                console.log('Review Text:', reviewText);
+                console.log('Selected Rating:', selectedRating);
+                console.log('Image Files:', imageFiles);
+                console.log('Video File:', videoFile);
+
+                // Simulate image URLs (in a real app, you'd upload these to a server)
+                const imageUrls = [];
+                if (imageFiles && imageFiles.length > 0) {
+                    for (let i = 0; i < imageFiles.length; i++) {
+                        const fileName = imageFiles[i].name.toLowerCase();
+                        if (fileName.includes('hamburger')) {
+                            imageUrls.push('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=122&h=64&q=80');
+                        } else if (fileName.includes('coca')) {
+                            imageUrls.push('https://images.unsplash.com/photo-1622482537200-58e0f297f38b?ixlib=rb-4.0.3&auto=format&fit=crop&w=122&h=64&q=80');
+                        } else if (fileName.includes('matcha')) {
+                            imageUrls.push('https://images.unsplash.com/photo-1514924013411-cbf25faa35bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=122&h=64&q=80');
+                        } else {
+                            imageUrls.push('https://picsum.photos/122/64?random=' + (i + 1));
+                        }
+                    }
+                }
+
+                const videoUrl = videoFile ? 'https://example.com/video.mp4' : '';
+
+                const review = {
+                    reviewerName: 'Mai Dương',
+                    rating: selectedRating || 4,
+                    date: 'Vừa xong',
+                    content: reviewText,
+                    images: imageUrls,
+                    video: videoUrl,
+                    order: 'Combo bánh hamburger + Matcha latte'
+                };
+
+                console.log('Review Object:', review);
+
+                // Store the review in localStorage
+                let reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+                reviews.push(review);
+                localStorage.setItem('reviews', JSON.stringify(reviews));
+
+                console.log('Reviews in localStorage:', localStorage.getItem('reviews'));
+
+                // Redirect to the reviews page
+                window.location.href = 'review2.html';
+            } catch (error) {
+                console.error('Error submitting review:', error);
+                alert('Có lỗi xảy ra khi gửi đánh giá. Vui lòng thử lại.');
+            }
+        }
+    </script>
+</body>
+</html>

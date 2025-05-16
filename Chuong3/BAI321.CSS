@@ -1,0 +1,78 @@
+* {
+    font-size: 15pt;
+    margin-top: 0.5vh;
+}
+
+
+body {
+    color: white;
+}
+
+
+.form_DangKy {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px ridge gainsboro;
+}
+
+
+.form_DangKy .item {
+    display: flex;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+}
+
+
+.form_DangKy .item>label {
+    width: 30%;
+    font-weight: bold;
+}
+
+
+.form_DangKy .item>input {
+    width: 65%;
+}
+
+
+.form_DangKy .item>input[type=submit] {
+    width: 100px;
+}
+
+
+@media screen and (max-width: 640px) {
+    body {
+        background-color: darkcyan;
+    }
+    .form_DangKy{
+        width: 100%;
+    }    
+    .form_DangKy .item {
+        /* display: flex; */
+        flex-direction:column;
+    }
+    .form_DangKy .item>input {
+        width: 95%;
+    }    
+}
+
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: blueviolet;
+    }
+    .form_DangKy{
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: blue;
+    }
+    .form_DangKy{
+        width: 50%;
+    }
+}

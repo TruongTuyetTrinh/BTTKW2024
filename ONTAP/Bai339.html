@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       
+        .header{
+            background-color: black;
+            color: aliceblue;
+            padding: 30px 30px;
+            text-align: center;
+            
+        }
+        .header>p{
+            color: gray;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap:20px;
+            padding: 30px;
+        }
+        .item{
+            border: 1px solid rgba(231, 231, 229, 0.866);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            
+
+        }
+        .item .so{
+            background-color: rgba(231, 231, 229, 0.866);
+            padding:  35px;
+            text-align: center;
+            height: 30px;
+            
+        }
+        .sale{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: black;
+            color: white;}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Shop in style</h1>
+        <p>With this shop homepage template</p>
+    </div>
+    <div class="container">
+        <div class="item">
+            <div class="so"> 450 x 300</div>
+           
+            <h4>Fancy Product</h4>
+            <span class="chu">$40.00 - $80.00</span> <br><br>
+            <button>View options</button>
+        
+
+        </div>
+        <div class="item">
+            <div class="sale">Sale</div>
+            <div class="so"> 450 x 300</div>
+           
+            <h4>Fancy Product</h4>
+            <span class="chu">$40.00 - $80.00</span> <br><br>
+            <button>View options</button>
+        </div>
+
+        
+        <div class="item">
+            
+            <p class="so"> 450 x 300</p>
+          
+            <h4>Fancy Product</h4>
+            <span class="chu">$40.00 - $80.00</span> <br><br>
+            <button>View options</button>
+        </div>
+
+        
+        <div class="item">
+            <p class="so"> 450 x 300</p>
+           
+            <h4>Fancy Product</h4>
+            <span class="chu">$40.00 - $80.00</span> <br><br>
+            <button>View options</button>
+        </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

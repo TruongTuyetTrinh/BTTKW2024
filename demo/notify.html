@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #474646;
+            font-family: 'Outfit', sans-serif;
+        }
+        .container {
+            width: 375px;
+            height: 812px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 40px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .green-section {
+            background: #E6F5EC; /* Light green background */
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+        }
+        .header-title {
+            color: #000;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Outfit', sans-serif;
+            flex: 1;
+            text-align: center;
+        }
+        .menu-icon {
+            width: 23px;
+            height: 23px;
+            font-size: 20px;
+            color: #000;
+        }
+        .notification-list {
+            padding: 0 16px;
+        }
+        .notification-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            position: relative;
+        }
+        .notification-avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 2px solid #F8A435;
+            box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.12);
+            margin-right: 16px;
+        }
+        .notification-details {
+            flex: 1;
+        }
+        .notification-message {
+            color: #000;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            margin-bottom: 4px;
+        }
+        .notification-time {
+            color: #6C6C6C;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .notification-unread {
+            width: 19px;
+            height: 19px;
+            background: #F84135;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 0;
+        }
+        .notification-unread-count {
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Green Section (Header + First Notification) -->
+        <div class="green-section">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-title">Thông báo</div>
+                <i class="fas fa-bars menu-icon"></i>
+            </div>
+
+            <!-- Notification List (First Notification) -->
+            <div class="notification-list">
+                <!-- Notification 1 -->
+                <div class="notification-item">
+                    <img class="notification-avatar" src="https://picsum.photos/65/65?random=1" alt="Avatar">
+                    <div class="notification-details">
+                        <div class="notification-message">Đơn hàng #1111 của bạn đang được giao. Vui lòng để ý điện thoại.</div>
+                        <div class="notification-time">1m ago.</div>
+                    </div>
+                    <div class="notification-unread">
+                        <div class="notification-unread-count">2</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Remaining Notifications (White Background) -->
+        <div class="notification-list">
+            <!-- Notification 2 -->
+            <div class="notification-item">
+                <img class="notification-avatar" src="https://picsum.photos/65/65?random=2" alt="Avatar">
+                <div class="notification-details">
+                    <div class="notification-message">Đơn hàng #1111 của bạn đang được chuẩn bị. Vui lòng đợi khoảng 20 phút.</div>
+                    <div class="notification-time">1m ago.</div>
+                </div>
+                <div class="notification-unread">
+                    <div class="notification-unread-count">2</div>
+                </div>
+            </div>
+
+            <!-- Notification 3 -->
+            <div class="notification-item">
+                <img class="notification-avatar" src="https://picsum.photos/65/65?random=3" alt="Avatar">
+                <div class="notification-details">
+                    <div class="notification-message">Đơn hàng #1110 đã được giao đến bạn. Nếu có bất kỳ vấn đề vui lòng nhắn tin cho quán.</div>
+                    <div class="notification-time">1m ago.</div>
+                </div>
+                <div class="notification-unread">
+                    <div class="notification-unread-count">2</div>
+                </div>
+            </div>
+
+            <!-- Notification 4 -->
+            <div class="notification-item">
+                <img class="notification-avatar" src="https://picsum.photos/65/65?random=4" alt="Avatar">
+                <div class="notification-details">
+                    <div class="notification-message">Hủy đơn hàng thành công! Tiền hoàn lại sẽ được xử lý trong 10 phút.</div>
+                    <div class="notification-time">1m ago.</div>
+                </div>
+                <div class="notification-unread">
+                    <div class="notification-unread-count">2</div>
+                </div>
+            </div>
+
+            <!-- Notification 5 -->
+            <div class="notification-item">
+                <img class="notification-avatar" src="https://picsum.photos/65/65?random=5" alt="Avatar">
+                <div class="notification-details">
+                    <div class="notification-message">Đã nhận hàng? Nếu bạn hài lòng, đừng quên để lại đánh giá nhé!</div>
+                    <div class="notification-time">1m ago.</div>
+                </div>
+                <div class="notification-unread">
+                    <div class="notification-unread-count">2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

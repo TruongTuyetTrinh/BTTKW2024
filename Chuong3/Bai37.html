@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .sp {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            gap: 15px; 
+            flex-wrap: wrap; 
+        }
+
+        .dt {
+            width: 30%; 
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        
+        .dt img {
+            max-width: 100%; 
+            border-radius: 10px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+        }
+
+        .sale {
+            font-weight: bold;
+        }
+
+        .giagoc {
+            color: rgb(184, 179, 179);
+            text-decoration: line-through;
+            font-size: smaller;
+        }
+
+        .red {
+            color: red;
+        }
+
+       
+        @media screen and (max-width: 768px) {
+            .dt {
+                flex-basis: 100%; /* Mỗi sản phẩm chiếm toàn bộ chiều rộng màn hình khi nhỏ hơn 768px */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sp">
+        <div class="dt">
+            <img src="../picture/hinh3.png" alt="iPhone 16 Pro Max">
+            <p>Điện thoại iPhone 6 32GB VN/A (Vàng Đồng) - Hàng Chính Hãng</p>
+            <p class="sale">6.199.000 ₫ <span class="giagoc">8.990.000 ₫</span> <span class="red">-31%</span></p>
+        </div>
+        <div class="dt">
+            <img src="../picture/hinh4.png" alt="Oppo A79">
+            <p>Điện thoại Samsung Galaxy J2 Pro 2018 - Hàng chính hãng</p>
+            <p class="sale">2.360.000 ₫ <span class="giagoc">3.290.000 ₫</span> <span class="red">-28%</span></p>
+        </div>
+        <div class="dt">
+            <img src="../picture/hinh5.png" alt="Samsung Galaxy A55">
+            <p>Điện thoại Xiaomi Mi Mix 2 (Black) - Hàng chính hãng</p>
+            <p class="sale">7.290.000 ₫ <span class="giagoc">12.290.000 ₫</span> <span class="red">-44%</span></p>
+        </div>
+    </div>
+</body>
+</html>

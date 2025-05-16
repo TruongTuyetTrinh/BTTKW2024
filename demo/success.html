@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Completed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+      background: #f5f7fa;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .success-box {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .success-icon {
+      width: 60px;
+      height: 60px;
+      background: #28a745;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+    }
+
+    .success-icon svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+
+    .success-box h2 {
+      font-weight: 700;
+      font-size: 24px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .success-box p {
+      font-size: 14px;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    .order-code {
+      background: #f5f7fa;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .order-status {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .order-status svg {
+      width: 20px;
+      height: 20px;
+      fill: #7f8c8d;
+    }
+
+    .order-status .active svg {
+      fill: #28a745;
+    }
+
+    .order-status .line {
+      flex: 1;
+      height: 2px;
+      background: #ddd;
+      margin: 0 5px;
+    }
+
+    .order-status .active-line {
+      background: #28a745;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .buttons .cancel-btn {
+      border: 2px solid #F48C8C;
+      background: transparent;
+      color: #F48C8C;
+    }
+
+    .buttons .cancel-btn:hover {
+      background: #F48C8C;
+      color: white;
+    }
+
+    .buttons .menu-btn {
+      border: 2px solid #F48C8C;
+      background: #F48C8C;
+      color: white;
+    }
+
+    .buttons .menu-btn:hover {
+      background: #e57373;
+      box-shadow: 0 4px 15px rgba(244, 140, 140, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="success-box">
+    <div class="success-icon">
+      <svg width="149" height="148" viewBox="0 0 149 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_3215_14184)">
+<rect x="31.8809" y="20.7998" width="85.28" height="85.28" rx="42.64" fill="#009944"/>
+</g>
+<path d="M61.4922 64.0318L70.5729 72.9151L88.7344 55.1484" stroke="white" stroke-width="6.24" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<filter id="filter0_d_3215_14184" x="0.680861" y="-0.00019455" width="147.679" height="147.68" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="10.4"/>
+<feGaussianBlur stdDeviation="15.6"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.25098 0 0 0 0 0.74902 0 0 0 0 1 0 0 0 0.24 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3215_14184"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3215_14184" result="shape"/>
+</filter>
+</defs>
+</svg>
+
+    </div>
+    <h2>Thank You! Order Completed</h2>
+    <p>You placed the order successfully. You'll get your food within 25 minutes. Thanks for using our services. Enjoy your food :)</p>
+    <div class="order-code">
+      Mã đơn hàng: {{ order_code }}
+    </div>
+    
+    <div class="buttons">
+      <button class="cancel-btn" onclick="alert('Hủy đơn thành công!')">Hủy đơn</button>
+      <button class="menu-btn" onclick="window.location.href='menu.html'">Menu</button>
+    </div>
+  </div>
+
+</body>
+</html>

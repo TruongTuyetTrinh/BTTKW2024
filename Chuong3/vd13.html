@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .grid-container {
+
+            display: grid;
+            gap: 10px;
+        }
+
+        .grid {
+            padding: 8px;
+            margin: 2px;
+            background-color: #0880588b;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            
+        }
+        @media (min-width:1024px) 
+        {
+            .grid-container
+            {
+                grid-template-columns: auto auto auto auto auto auto;
+                grid-auto-rows: minmax(100px, auto); 
+
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px)
+         {
+            .grid-container {
+              grid-template-columns: repeat(4, 1fr); 
+              grid-auto-rows: minmax(100px, auto);   
+            }
+         }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class=" grid m1">Mục 1</div>
+        <div class=" grid m2">Mục 2</div>
+        <div class=" grid m3">Mục 3</div>
+        <div class=" grid m4">Mục 4</div>
+        <div class=" grid m5">Mục 5</div>
+        <div class=" grid m6">Mục 6</div>
+    </div>
+</body>
+
+</html>

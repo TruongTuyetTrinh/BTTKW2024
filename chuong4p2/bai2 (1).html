@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: green;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+
+<body >
+    <p>Chào mừng bạn đến với trang web của chúng tôi!</p>
+    <span>Hôm nay là: </span>
+    <span id="gio"></span>
+
+    <script>
+        window.onload = function() {
+            time();}
+        function time() {
+            document.getElementById('gio').innerHTML = Date();
+
+        }
+    </script>
+
+</body>
+
+</html>

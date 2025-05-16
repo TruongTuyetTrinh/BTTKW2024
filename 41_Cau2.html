@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form - 2 Cá»™t</title>
+    <style>
+        /* Äá»‹nh dáº¡ng body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container chÃ­nh */
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            max-width: 1024px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        /* Container cho hÃ¬nh áº£nh */
+        .image-container {
+            flex:1;
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        /* Container cho form */
+        .form-container {
+            flex: 1;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* TiÃªu Ä‘á» cá»§a form */
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00796b;
+        }
+
+        /* Äá»‹nh dáº¡ng cÃ¡c nhÃ£n vÃ  input */
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            flex: 1;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 2;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+            transition: border-color 0.3s;
+        }
+
+        /* Äá»•i mÃ u border khi focus */
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #00796b;
+            outline: none;
+        }
+
+        /* Äá»‹nh dáº¡ng cho nÃºt gá»­i */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #00796b;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        @media all and (max-width: 767px)
+        {
+            label{
+                display: none;
+            }
+            .image-container{
+                display: none;
+            }
+            .form-container{
+                width: 50%;
+            }
+            
+            
+           
+            
+            
+        }
+        @media all and (min-width:768px) and (max-width: 1023px )
+        {
+            .main-container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media  all and (min-width:1024px)
+        {
+            .main-container{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="image-container">
+        <img src="../Images/student.png" style="width: 100%;">
+    </div>
+    <div class="form-container">
+        <h2>Form Thông Tin Cá Nhân</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="fullname">Họ tên:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên của bạn" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Ngày sinh:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ</label>
+                <textarea id="address" name="address" rows="4" placeholder="Nhập địa chỉ của bạn" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Gửi Thông Tin</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

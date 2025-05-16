@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./luyentap.css">
+</head>
+<body>
+   <header>
+       <div class="logo">
+           <img src="logo.png">
+       </div>
+       <div class="menu">
+          
+           <li><a href="">Nữ</a>
+           <ul class="sub-menu">
+               <li> <a href=""> Hàng mới về</a></li>
+               <li> <a href=""> Collection</a></li>
+               <li> <a href=""> Áo</a>
+               <ul>
+                   <li> Áo sơmi</li>
+                   <li> Áo thun</li>
+                   <li> Áo vest</li>
+                   <li> Áo len</li>
+                   <li> Áo khoác</li>
+               </ul>
+               </li>
+               <li> <a href=""> Quần</a>
+               <ul>
+                   <li>Quần jean</li>
+                   <li>Quần lửng</li>
+                   <li>Quần dài</li>
+               </ul>
+               </li>
+           </ul>
+           </li>
+           <li><a href="">Nam</a></li>
+           <li><a href="">Trẻ em</a></li>
+           <li><a href="">Độc quyền online</a></li>
+           <li><a href="">BST</a></li>
+           <li><a href="">Thông tin</a></li>
+            
+        
+       </div>
+       
+       <div class="other">
+          <li><input type="text" placeholder="Tìm kiếm sản phẩm">
+          <i class="fas fa-search"></i>
+          </li>
+          <li> <i class="fas fa-paw"> </i> |</li>
+          <li> <i class="fas fa-user"> </i> |</li>
+          <li> <i class="fas fa-shopping-bag"> </i></li>
+           
+       </div>
+      
+
+       
+   </header>
+   
+       <div class="content">
+           <div class="sale a"> SALE OFF 60%</div>
+           <div class="sale b"> SALE OFF 40%</div>
+           <div class="sale c"> SALE OFF 30%</div>
+       </div>
+   <div class="anh">
+       <div class="carousel-inner">
+        <img src="./1.webp" alt="Image 1" class="carousel-item active">
+        <img src="./9cf35b300c22ed4e9e8049334d1048c1.webp" alt="Image 2" class="carousel-item">
+    </div>
+    <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+    <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+    <div class="carousel-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+    </div>
+   </div>
+   <script>
+          let currentIndex = 0;
+
+            function showSlide(index) {
+                const carouselInner = document.querySelector('.carousel-inner');
+                const totalSlides = document.querySelectorAll('.carousel-item').length;
+
+                // Tính toán chỉ số ảnh hiện tại
+                currentIndex = (index + totalSlides) % totalSlides;
+
+                // Dịch chuyển carousel để hiển thị ảnh hiện tại
+                carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function nextSlide() {
+                showSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                showSlide(currentIndex - 1);
+            }
+
+       </script>
+       <script>
+           const carousel = document.querySelector('.carousel-inner');
+            const slides = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                const width = slides[0].offsetWidth;
+                carousel.style.transform = `translateX(-${index * width}px)`;
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[index].classList.add('active');
+                currentIndex = index;
+            }
+
+            document.querySelector('.prev-btn').addEventListener('click', () => {
+                const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(newIndex);
+            });
+
+            document.querySelector('.next-btn').addEventListener('click', () => {
+                const newIndex = (currentIndex + 1) % slides.length;
+                showSlide(newIndex);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => showSlide(index));
+            });
+    </script>
+    <footer>
+        <div class="footer-container">
+            <!-- Logo and Social Media -->
+            <div class="footer-logo">
+                <img src="logo.png" alt="IVY Moda">
+                <div class="footer-social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-google"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="hotline">HOTLINE: 0246 662 3434</div>
+            </div>
+
+            <!-- Information -->
+            <div>
+                <div class="footer-title">Giới thiệu</div>
+                <ul class="footer-list">
+                    <li><a href="#">Về IVY moda</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                    <li><a href="#">Hệ thống cửa hàng</a></li>
+                </ul>
+            </div>
+
+            <!-- Customer Service -->
+            <div>
+                <div class="footer-title">Dịch vụ khách hàng</div>
+                <ul class="footer-list">
+                    <li><a href="#">Chính sách điều khoản</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Chính sách giao nhận vận chuyển</a></li>
+                    <li><a href="#">Chính sách thẻ thành viên</a></li>
+                    <li><a href="#">Q&A</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <div class="footer-title">Liên hệ</div>
+                <ul class="footer-list">
+                    <li><a href="#">Hotline</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Messenger</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div class="footer-title">Nhận thông tin các chương trình của IVY moda</div>
+                <form>
+                    <input type="email" placeholder="Nhập địa chỉ email">
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <div class="footer-app">
+                    <img src="appstore.png" alt="App Store">
+                    <img src="googleplay.png" alt="Google Play">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© IVY moda All rights reserved</div>
+    </footer>
+   <section class="cartegory">
+       <div class="container">
+          <div class="cartegory-top">
+              
+          </div>
+           
+       </div>
+   </section>
+</body>
+
+</html>

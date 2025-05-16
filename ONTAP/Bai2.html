@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .container{
+            display: grid;
+            gap:10px
+        }
+        .header{
+            background-color: coral;
+            text-align: center;
+            padding: 15px;
+        }
+        .content{
+            padding: 30px;
+            height: 480px;
+            background-color: aquamarine;
+            
+        }
+        .sidebar{
+            padding: 15px;
+            background-color: yellow;
+
+        }
+        .footer{
+            background-color: rgb(140, 203, 225);
+            text-align: center;
+            padding: 15px;
+        }
+        @media screen and (max-width:640px) {
+            .content{
+                height: 480px;
+            }
+            .sidebar{
+                display: none;
+            }
+           
+        }
+        @media screen and (min-width: 768px) {
+            .sidebar{
+                padding: 15px;
+                background-color: yellow;
+
+            }
+        
+        }
+        @media screen and (min-width:1024px) {
+            .container{
+                grid-template-areas: 'header header header'
+                                    'sidebar content content'
+                                    'footer footer footer' ;
+            }
+            .content{
+                grid-area: content  ;
+            }
+            .header{
+                grid-area: header  ;
+            }
+            .sidebar{
+                background-color: rgb(246, 237, 171);
+                grid-area: sidebar  ;
+            }
+            .footer{
+                grid-area: footer ;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">Content</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer </div>
+    </div>
+</body>
+</html>

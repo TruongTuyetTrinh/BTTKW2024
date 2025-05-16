@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The HideOut Coffee Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=SF+Pro+Text:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F8FAFC;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            width: 375px;
+            height: 812px;
+            margin: 0 auto;
+            background-color: #F8FAFC;
+            border-radius: 40px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 16px;
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header-top {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .back-icon, .menu-icon {
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            color: #0F172A;
+        }
+        .header-title {
+            flex: 1;
+            text-align: center;
+            color: #0F172A;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+        .header-subtitle {
+            text-align: center;
+            color: #000;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: 2px;
+        }
+        .invoice-section {
+            width: 345px;
+            height: 202px;
+            margin: 16px;
+            background: #FFFBFB;
+            border-radius: 20px;
+            border: 2px solid #B6B1B1;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .invoice-title {
+            text-align: center;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 0;
+        }
+        .invoice-details {
+            padding: 0 16px;
+        }
+        .invoice-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .invoice-label, .invoice-value {
+            color: #000;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        .invoice-total-label, .invoice-total-value {
+            font-weight: 600;
+        }
+        .invoice-divider {
+            width: 90%;
+            height: 1px;
+            background: #B5B5B5;
+            margin: 8px auto;
+        }
+        .invoice-details-link {
+            text-align: center;
+            color: #EA8C8C;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 16px;
+            position: relative;
+        }
+        .chevron-right {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 13px;
+            height: 13px;
+        }
+        .chevron-right::before, .chevron-right::after {
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 2px;
+            background: #EF8484;
+        }
+        .chevron-right::before {
+            transform: rotate(26deg);
+        }
+        .chevron-right::after {
+            transform: rotate(146deg);
+        }
+        .chat-section {
+            padding: 16px;
+        }
+        .chat-message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .chat-message.received {
+            justify-content: flex-start;
+        }
+        .chat-message.sent {
+            justify-content: flex-end;
+        }
+        .chat-avatar {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .chat-avatar.sent {
+            margin-left: 8px;
+            margin-right: 0;
+        }
+        .chat-bubble {
+            max-width: 302px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-family: 'SF Pro Text', sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            position: relative;
+        }
+        .chat-bubble.received {
+            background: rgba(68, 97, 84, 0.1);
+            color: #000;
+        }
+        .chat-bubble.sent {
+            background: #49B583;
+            color: #fff;
+        }
+        .chat-status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            position: absolute;
+            bottom: 5px;
+        }
+        .chat-bubble.received .chat-status {
+            background: #808080;
+            left: -20px;
+        }
+        .chat-bubble.sent .chat-status {
+            background: #3FCA8A;
+            right: -20px;
+        }
+        .input-section {
+            position: sticky;
+            bottom: 0;
+            padding: 12px 16px;
+            background: #F8FAFC;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .input-icons {
+            display: flex;
+            gap: 6px;
+        }
+        .input-icon {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            border: 1px solid #49B583;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .input-icon i {
+            color: #49B583;
+            font-size: 14px;
+        }
+        .input-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            background: #C4C4C4;
+            border-radius: 10px;
+            padding: 6px 8px;
+            box-shadow: 0px 8px 32px rgba(127.13, 148.34, 178.35, 0.20);
+        }
+        .input-field {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #000;
+            font-size: 15px;
+            opacity: 0.6;
+        }
+        .voice-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .voice-icon i {
+            color: #000;
+            font-size: 16px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-top">
+                <i class="fas fa-arrow-left back-icon"></i>
+                <div class="header-title">The HideOut Coffee</div>
+                <i class="fas fa-bars menu-icon"></i>
+            </div>
+            <div class="header-subtitle">Online 30 phút trước</div>
+        </div>
+
+        <!-- Invoice Section -->
+        <div class="invoice-section">
+            <div class="invoice-title">Bạn đang hỏi về Hóa đơn này</div>
+            <div class="invoice-details">
+                <div class="invoice-row">
+                    <span class="invoice-label">Tổng tạm tính</span>
+                    <span class="invoice-value">77,550</span>
+                </div>
+                <div class="invoice-row">
+                    <span class="invoice-label">Phí giao hàng</span>
+                    <span class="invoice-value">9,000</span>
+                </div>
+                <div class="invoice-divider"></div>
+                <div class="invoice-row">
+                    <span class="invoice-total-label">Tổng cộng</span>
+                    <span class="invoice-total-value">88,650</span>
+                </div>
+            </div>
+            <div class="invoice-details-link">
+                Xem chi tiết
+                <span class="chevron-right"></span>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <!-- Received -->
+            <div class="chat-message received">
+                <img class="chat-avatar" src="https://picsum.photos/28/28?random=1" alt="Avatar">
+                <div class="chat-bubble received">
+                    Here are the resource files of todays’ physics class
+                    <div class="chat-status"></div>
+                </div>
+            </div>
+
+            <!-- Sent -->
+            <div class="chat-message sent">
+                <div class="chat-bubble sent">
+                    Thanks a lot Maya. <span class="emoji">😍😍</span><br>
+                    Is anyone please share your class note of this lecture. <span class="emoji">🙏🙏</span>
+                    <div class="chat-status"></div>
+                </div>
+                <img class="chat-avatar sent" src="https://picsum.photos/28/28?random=2" alt="Avatar">
+            </div>
+
+            <!-- Received -->
+            <div class="chat-message received">
+                <img class="chat-avatar" src="https://picsum.photos/28/28?random=1" alt="Avatar">
+                <div class="chat-bubble received">
+                    Here are the resource files of todays’ physics class
+                    <div class="chat-status"></div>
+                </div>
+            </div>
+
+            <!-- Sent -->
+            <div class="chat-message sent">
+                <div class="chat-bubble sent">
+                    Thank you so much Vishal <span class="emoji">❤️❤️</span>
+                    <div class="chat-status"></div>
+                </div>
+                <img class="chat-avatar sent" src="https://picsum.photos/28/28?random=2" alt="Avatar">
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-icons">
+                <div class="input-icon"><i class="fas fa-plus"></i></div>
+                <div class="input-icon"><i class="fas fa-image"></i></div>
+                <div class="input-icon"><i class="fas fa-file-alt"></i></div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" placeholder="Type something">
+                <div class="voice-icon"><i class="fas fa-microphone"></i></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

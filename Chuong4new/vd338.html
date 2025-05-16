@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: aliceblue;
+            padding: 20px 40px;
+            
+        }
+        a{
+            color:aliceblue;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .body{
+            text-align: center;
+            background-color: black;
+            padding: 80px 400px;
+            font-size: 25px;
+
+        }
+        h1{
+            color: white;
+        }
+        .body>p
+        {
+            color: gray
+        }
+        .bt1{
+            background-color: rgb(12, 84, 216);
+            color: white;
+            border-radius: 5px;
+            border-color: rgb(12, 84, 216);
+            padding: 8px;
+            width: 100px;
+        }
+        .bt2{
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            border-color:  white;
+            padding: 8px;
+            margin-left: 15px;
+            width: 100px;
+            
+        }
+        .main{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap:30px;
+            padding: 40px 150px
+            
+        }
+        .call{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="start">Start Bootstrap</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Services</a>
+      </div>
+    </div>
+    <div class="body">
+        <h1>Present your business in a whole new way</h1>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis est pariatur ratione, temporibus quaerat molestias.</p>
+        <button class="bt1">Get Started</button>
+        <button class="bt2">Learn more</button>
+
+    </div>
+
+    <div class="main">
+        <div class="item1">
+            <h4>Featured title</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum reiciendis veritatis enim nulla culpa at!</p>
+            <a class="call" href="#">Call to action</a>
+        </div>
+        <div class="item1">
+            <h4>Featured title</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum reiciendis veritatis enim nulla culpa at!</p>
+            <a class="call" href="#">Call to action</a>
+        </div>
+        <div class="item1">
+            <h4>Featured title</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum reiciendis veritatis enim nulla culpa at!</p>
+            <a class="call" href="#">Call to action</a>
+        </div>
+    </div>
+</body>
+</html>

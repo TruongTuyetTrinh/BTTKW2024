@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffe3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 550px;
+            box-sizing: border-box;
+            border-top: 5px solid #42a5f5;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1e88e5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form-group label {
+            font-weight: 500;
+            color: #555;
+            flex: 1;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            flex: 2;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #42a5f5;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #42a5f5;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e88e5;
+        }
+        @media screen and (max-width:414px) {
+            label{
+                font-size: 0px;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .form-group{
+                display: grid;
+                grid-template-columns: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Thông tin người dùng</h2>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="fullname">Họ tên:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên của bạn" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Ngày sinh:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Nhập địa chỉ của bạn" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Gửi</button>
+    </form>
+</div>
+
+</body>
+</html>

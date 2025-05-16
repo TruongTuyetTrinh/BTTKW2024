@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+
+        }
+
+        .start {
+            margin-left: 40px;
+        }
+
+        .nav a {
+            color: aliceblue;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .title {
+            background-color: rgb(246, 241, 241);
+            padding: 50px;
+            text-align: center;
+
+        }
+
+        .container {
+            padding: 0px 30px;
+            margin: 50px;
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px
+        }
+
+        .item1 {
+            grid-column: 1/2;
+
+
+        }
+
+        .item2 {
+            grid-column: 2/3;
+            margin: 30px;
+
+
+
+        }
+
+        .to {
+            background-color: lightgrey;
+            height: 100%;
+            width: 400px;
+            text-align: center;
+            font-size: 30px;
+
+
+        }
+
+        
+        .search {
+            width: 250px;
+            margin-bottom: 10px;
+            /* Giảm khoảng cách giữa các bảng */
+        }
+
+        .search {
+
+            border: 1px solid gray;
+
+            height: 100px;
+            width: 250px;
+
+        }
+
+        th {
+            text-align: left;
+            padding-left: 10px;
+            font-weight: 100;
+            background-color: lightgray;
+        }
+
+        td {
+            border-top: 1px solid gray;
+
+        }
+
+        .go {
+            padding: 5px;
+        }
+
+        .cate {
+            border: 1px solid gray;
+            margin-top: 0;
+            height: 100px;
+            width: 250px;
+
+
+        }
+
+        td {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="start">Start Bootstrap</div>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+        </div>
+    </div>
+    <div class="title">
+        <h2>Welcome to Blog Home!</h2>
+        <p> A Bootstrap 5 starter layout for your next blog homepage</p>
+    </div>
+    <div class="container">
+        <div class="item1">
+            <p class="to">850 x 350</p>
+            January 1, 2023
+            <h4>Featured Post Title </h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, sapiente?</p>
+            <button>Read more </button>
+        </div>
+        <div class="item2">
+            <table class="search">
+                <tr>
+                    <th>Search</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="go">
+                            <input id="text" placeholder="Enter search term...">
+                            <button>Go</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="item2 a ">
+            <table class="cate">
+                <tr>
+                    <th>Categories</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">Web Design</a>
+                        <a href="#">JavaScript</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">HTML</a>
+                        <a href="#">CSS</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#">Freebies</a>
+                        <a href="#">Tutorials</a>
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="item2">
+            <table>
+                <tr>
+                    <th>Side Widget</th>
+                </tr>
+                <tr>
+                    <td>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, id?</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

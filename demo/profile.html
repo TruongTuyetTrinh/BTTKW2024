@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #474646;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            width: 375px;
+            height: 812px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 40px;
+            position: relative;
+            overflow-y: auto;
+        }
+        .header {
+            width: 100%;
+            height: 200px;
+            background: #49B583; /* Green background */
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+            text-align: center;
+        }
+        .header-title {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 600;
+            padding-top: 40px;
+        }
+        .menu-icon {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            bottom: -60px;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+        }
+        .avatar-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: #49B583;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .profile-form {
+            padding: 80px 24px 24px;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-label {
+            color: #000;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .form-input {
+            width: 100%;
+            height: 50px;
+            padding: 10px 16px;
+            border: 1px solid #A9A9A9;
+            border-radius: 8px;
+            font-size: 12px;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+            background: transparent;
+        }
+        .update-button {
+            width: 100%;
+            height: 50px;
+            background: #003092;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .update-button:hover {
+            background: #002070;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-title">Profile</div>
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="avatar-container">
+                <img class="avatar" src="https://picsum.photos/120/120?random=1" alt="Avatar">
+                <div class="avatar-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Form -->
+        <div class="profile-form">
+            <div class="form-group">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-input" id="username" value="yANCHUI">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Địa chỉ</label>
+                <input type="text" class="form-input" id="address" value="123 Nguyễn Hữu Trác">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-input" id="phone" value="+14987889999">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-input" id="password" value="123158">
+            </div>
+            <button class="update-button" onclick="updateProfile()">Update</button>
+        </div>
+    </div>
+
+    <script>
+        // Load saved profile data from localStorage when the page loads
+        window.onload = function() {
+            const savedProfile = JSON.parse(localStorage.getItem('profile')) || {};
+            document.getElementById('username').value = savedProfile.username || 'yANCHUI';
+            document.getElementById('address').value = savedProfile.address || '123 Nguyễn Hữu Trác';
+            document.getElementById('phone').value = savedProfile.phone || '+14987889999';
+            document.getElementById('password').value = savedProfile.password || '123158';
+        };
+
+        function updateProfile() {
+            // Get the input values
+            const username = document.getElementById('username').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+
+            // Create an object with the updated profile data
+            const profileData = {
+                username: username,
+                address: address,
+                phone: phone,
+                password: password
+            };
+
+            // Save the updated profile data to localStorage
+            localStorage.setItem('profile', JSON.stringify(profileData));
+
+            // Update the input fields with the new values
+            document.getElementById('username').value = username;
+            document.getElementById('address').value = address;
+            document.getElementById('phone').value = phone;
+            document.getElementById('password').value = password;
+
+            // Show a confirmation message
+            alert('Profile updated successfully!\n\n' +
+                  'Username: ' + username + '\n' +
+                  'Address: ' + address + '\n' +
+                  'Phone Number: ' + phone + '\n' +
+                  'Password: ' + password);
+        }
+    </script>
+</body>
+</html>
